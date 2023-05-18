@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Confirmation de votre réservation{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+    <div class="row">
+        <h1 class="text-center m-md-3">Votre réservation est bien confirmée</h1>
+
+        <div class="row">
+            <h2 class="text-center m-md-3">Vos informations : </h2>
+        </div>
+        <div class="row">
+
+                <p class="text-center">Réservation au nom de {{ reservation.firstName }} {{ reservation.lastName }}</p>
+                <p class="text-center">Votre email : {{ reservation.guestEmail }}</p>
+                <p class="text-center">Date de la réservation : {{ reservation.date|date('d-m-Y') }}</p>
+                <p class="text-center">A : {{ reservation.time|date('H:i') }}</p>
+                <p class="text-center">Pour : {{ reservation.guestNumber }} personnes</p>
+
+        </div>
+    </div>
+
+{% endblock %}

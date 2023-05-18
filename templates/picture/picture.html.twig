@@ -1,0 +1,22 @@
+<div class="row justify-content-center mb-4">
+<div id="carouselExample" class="carousel slide col-8">
+    <div class="carousel-inner">
+        {% for picture in pictures %}
+        <div class="carousel-item {% if loop.index ==1 %}active{% endif %}">
+            <div id="image">
+            <img src="upload/images/home/{{ picture.image }}" class="d-block img-fluid carousel" alt="{{ picture.title }}">
+            <div id="image-text">{{ picture.title }}</div>
+            </div>
+         </div>
+        {% endfor %}
+        </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</div>

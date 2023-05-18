@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réserver{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+        <h1 class="text-center headline m-4">Réservation</h1>
+        {{ form_start(reservationForm) }}
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                {{ form_row(reservationForm.firstName) }}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                {{ form_row(reservationForm.lastName) }}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                {{ form_row(reservationForm.date) }}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                {{ form_row(reservationForm.time) }}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                {{ form_row(reservationForm.guestNumber) }}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                {{ form_row(reservationForm.guestEmail) }}
+    <button type="submit" class="btn btn-primary btn-lg mt-2">Réserver</button>
+            </div>
+        </div>
+        {{ form_end(reservationForm) }}
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('reservationHour') }}
+{% endblock %}

@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-md bg-secondary">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <img class="navbar me-4" aria-current="page" src="{{ asset('upload/images/restaurant.png') }}" alt="logo">
+            <a class="navbar-brand" href="{{ path('app_home') }}">Accueil</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{ path('app_dish') }}">Notre carte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_menu') }}">Nos menus</a>
+                </li>
+                {% if not app.user %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_login') }}">Se connecter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_register') }}">S'inscrire</a>
+                    </li>
+                {% endif %}
+            </ul>
+            {% if app.user and not is_granted('ROLE_ADMIN') %}
+                <span class="navbar-text">
+                    Bonjour, {{ app.user.firstName }} {{ app.user.lastName }}
+                    </span>
+                <a type="button" class="btn btn-outline-primary m-2" href="{{ path('app_user') }}">Votre profil</a>
+            {% endif %}
+        </div>
+
+        {% if is_granted('ROLE_ADMIN') %}
+            <a type="button" class="btn btn-outline-primary m-2" href="{{ path('admin') }}">Administration</a>
+        {% endif %}
+
+        {% if app.user %}
+            <a type="button" class="btn btn-outline-primary m-2" href="{{ path('app_logout') }}">Se déconnecter</a>
+        {% endif %}
+        <a type="button" class="btn btn-primary btn-lg" href="{{ path('app_reservation') }}">Réserver</a>
+    </div>
+</nav>

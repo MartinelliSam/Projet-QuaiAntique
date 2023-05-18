@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier mon profil{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md text-center">
+                <h1 class="mt-2 text-body">Modifier mon profil</h1>
+            </div>
+        </div>
+
+        {{ form_start(form) }}
+        <div class="row justify-content-center">
+            <div class="col-sm-4 m-2">
+                {{ form_row(form.guestNumber, {
+                    label: 'Modifier mon nombre de convives par défaut',
+                }) }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <button type="submit" class="btn btn-primary btn-lg mt-3 mb-3">Modifier mes informations</button>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le Quai Antique{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <img src="{{ asset('upload/images/background.jpg') }}" class="img-fluid" alt="Background">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center fst-italic m-6">
+                <h1 class="m-5 headline">Bienvenue au Quai Antique</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="text-center text-body mb-5">Venez découvrir la cuisine du chef Arnaud Michant, dans un cadre intimiste et chaleureux aux portes de Chambéry.</h2>
+            </div>
+            <div class="col-md-6">
+                <p class="mb-3 fs-5 justify">
+                    Derrière nos assiettes se cache l'amour du chef pour les produits et producteurs de Savoie.
+                    C'est pourquoi notre restaurant vous proposera une cuisine locale, fraîche et de saison, avec une carte inspirée par nos arrivages.
+                </p>
+                <p class="mb-3 fs-5 justify">
+                    Arnaud Michant vous emmène en voyage dans son univers culinaire, à travers une cuisine sans artifices, au déjeuner comme au dîner,
+                    pour vous faire vivre une expérience gastronomique unique.
+                </p>
+                <p class="mb-3 fs-5 justify">
+                    Au Quai Antique, le menu se réinvente chaque semaine et la carte change avec les saisons.
+                    Nous saurons satisfaire tous les palais, des plus novices aux plus délicats.
+                </p>
+                <p class="mb-3 fs-5 justify">
+                    Associations audacieuses, classiques revisités, produits du terroir...le chef saura vous surprendre avec sa créativité,
+                    en mélangeant ainsi moderne et traditionnel.
+                </p>
+                <p class="mb-3 fs-5 justify">
+                    Pour vous mettre en appétit, vous trouverez ci-dessous un aperçu de notre cuisine, à travers nos plats les plus appréciés.
+                    Notre équipe vous attend pour vous faire partager notre amour de la région !</p>
+            </div>
+        </div>
+        <div class="row m-5">
+            {{ render(path('app_picture')) }}
+        </div>
+        <div class="row">
+            <div class="col text-center">
+            <a class="btn btn-primary btn-lg mb-5" type="button" href="{{ path('app_reservation') }}">Réserver</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

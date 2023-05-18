@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S'inscrire{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row mt-2">
+            <h1 class="text-center headline m-5">S'inscrire</h1>
+        </div>
+        <div class="row">
+
+            {{ form_start(registrationForm) }}
+            <div class="row justify-content-center">
+                <div class="col-sm-4 m-2">
+
+                    {{ form_row(registrationForm.firstName, {
+                        label: 'Votre nom'
+                    }) }}
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4 m-2">
+                    {{ form_row(registrationForm.lastName, {
+                        label: 'Votre prénom'
+                    }) }}
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-sm-4 m-2">
+                    {{ form_row(registrationForm.email, {
+                        label: 'Votre e-mail'
+                    }) }}
+                    <div id="emailHelp" class="form-text">Exemple : john@doe.fr</div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-sm-4 m-2">
+                    {{ form_row(registrationForm.Password.first, {
+                        label: 'Choisissez un mot de passe'
+                    }) }}
+                    <div id="passwordHelp" class="form-text">Votre mot de passe doit contenir entre 12 et 50 caractères</div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-sm-4 m-2">
+                    {{ form_row(registrationForm.Password.second, {
+                        label: 'Confirmez votre mot de passe'
+                    }) }}
+
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-sm-4 m-2">
+                    {{ form_row(registrationForm.guestNumber, {
+                        label: 'Choisissez un nombre de convives par défaut',
+                    }) }}
+                    <button type="submit" class="btn btn-primary btn-lg mt-3 mb-3">S'inscrire</button>
+                </div>
+            </div>
+
+        </div>
+
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}
