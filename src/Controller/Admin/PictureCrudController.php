@@ -30,5 +30,4 @@ class PictureCrudController extends AbstractCrudController
                 ->setSortable(false)
         ];
     }
-
 }

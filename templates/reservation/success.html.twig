@@ -11,12 +11,11 @@
             <h2 class="text-center m-md-3">Vos informations : </h2>
         </div>
         <div class="row">
-
-                <p class="text-center">Réservation au nom de {{ reservation.firstName }} {{ reservation.lastName }}</p>
-                <p class="text-center">Votre email : {{ reservation.guestEmail }}</p>
-                <p class="text-center">Date de la réservation : {{ reservation.date|date('d-m-Y') }}</p>
-                <p class="text-center">A : {{ reservation.time|date('H:i') }}</p>
-                <p class="text-center">Pour : {{ reservation.guestNumber }} personnes</p>
+            <p class="text-center">Réservation au nom de {{ reservation.firstName }} {{ reservation.lastName }}</p>
+            <p class="text-center">Votre email : {{ reservation.guestEmail }}</p>
+            <p class="text-center">Date de la réservation : {{ reservation.date|date('d-m-Y') }}</p>
+            <p class="text-center">A : {{ reservation.time|date('H:i') }}</p>
+            <p class="text-center">Pour : {{ reservation.guestNumber }} personnes</p>
 
         </div>
     </div>

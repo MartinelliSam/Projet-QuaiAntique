@@ -53,8 +53,5 @@ class ReservationController extends AbstractController
                 'reservationForm' => $form->createView(),
                 'hours' => $openingHour
             ]);
-
-
         }
-
 }

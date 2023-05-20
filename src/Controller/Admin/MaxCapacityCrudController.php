@@ -24,5 +24,4 @@ class MaxCapacityCrudController extends AbstractCrudController
             IntegerField::new('total', 'Capacité maximum du restaurant')
         ];
     }
-
 }

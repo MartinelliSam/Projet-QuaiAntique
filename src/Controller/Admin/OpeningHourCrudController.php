@@ -31,5 +31,4 @@ class OpeningHourCrudController extends AbstractCrudController
             TimeField::new('eveningClosingHour', 'Heure de fermeture du soir'),
         ];
     }
-
 }

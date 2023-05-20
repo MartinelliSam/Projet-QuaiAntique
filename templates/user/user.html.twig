@@ -3,11 +3,12 @@
 {% block title %}Votre profil{% endblock %}
 
 {% block body %}
+
     {% for message in app.flashes('success') %}
         <div class="row justify-content-center">
-    <div class="col-md-4 alert alert-success mt-4 text-center">
-        {{ message }}
-    </div>
+            <div class="col-md-4 alert alert-success mt-4 text-center">
+                {{ message }}
+            </div>
         </div>
     {% endfor %}
 
@@ -16,19 +17,25 @@
             <h1 class="mt-2 text-body">Votre profil</h1>
         </div>
     </div>
+
     <div class="row">
         <div class="col-md text-center">
             <p class="mt-2">Votre email : {{ app.user.email }}</p>
         </div>
-        <div class="row">
-            <div class="col-md text-center">
-                <p class="mt-2">Votre nombre de convives par défaut : {{ app.user.guestNumber }}</p>
-            </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md text-center">
+            <p class="mt-2">Votre nombre de convives par défaut : {{ app.user.guestNumber }}</p>
         </div>
     </div>
+
+
     <div class="row">
         <div class="col text-center">
-            <a class="btn btn-primary btn-lg mb-5" type="button" href="{{ path('app_edit_user') }}">Modifier mon profil</a>
+            <a class="btn btn-primary btn-lg mb-5" type="button" href="{{ path('app_edit_user') }}">Modifier mon
+                profil</a>
         </div>
     </div>
+
 {% endblock %}

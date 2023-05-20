@@ -7,14 +7,14 @@
         <div class="row mt-2 mb-3 justify-content-center">
             <div class="col-md-4 text-center">
                 <h1 class="m-5 headline">Notre Carte</h1>
-            {% for dishCategory in dishCategories %}
-                <h2 class="m-5 fst-italic text-body">{{ dishCategory.title }}</h2>
-                {% for dish in dishCategory.dish %}
-                    <h4 class="text-body">{{ dish.title }}</h4>
-                    <p class="fw-lighter fst-italic">{{ dish.description }}</p>
-                    <p class="fw-semibold">{{ dish.price }}€</p>
+                {% for dishCategory in dishCategories %}
+                    <h2 class="m-5 fst-italic text-body">{{ dishCategory.title }}</h2>
+                    {% for dish in dishCategory.dish %}
+                        <h4 class="text-body">{{ dish.title }}</h4>
+                        <p class="fw-lighter fst-italic">{{ dish.description }}</p>
+                        <p class="fw-semibold">{{ dish.price }}€</p>
                     {% endfor %}
-            {% endfor %}
+                {% endfor %}
             </div>
         </div>
     </div>
