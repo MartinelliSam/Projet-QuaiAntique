@@ -87,6 +87,11 @@ class OpeningHour
         return $this;
     }
 
+    public function findDayOfWeek($date): string
+    {
+        return $date->format('N');
+    }
+
 }
 
 

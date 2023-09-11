@@ -10,7 +10,7 @@
                 <h1 class="text-center headline m-4">Réservation</h1>
             </div>
         </div>
-        {{ form_start(reservationForm) }}
+        {{ form_start(reservationForm, { attr: { id : 'reservation_form' } }) }}
         <div class="row justify-content-center">
             <div class="col-md-4">
                 {{ form_row(reservationForm.firstName) }}
@@ -26,17 +26,18 @@
                 {{ form_row(reservationForm.date) }}
             </div>
         </div>
-        <div class="row justify-content-center">
+
+        <div class="row justify-content-center" id="hour">
             <div class="col-md-4">
                 {{ form_row(reservationForm.time) }}
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center hidden" id="number">
             <div class="col-md-4">
                 {{ form_row(reservationForm.guestNumber) }}
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center hidden" id="contact">
             <div class="col-md-4">
                 {{ form_row(reservationForm.guestEmail) }}
                 <button type="submit" class="btn btn-primary btn-lg mt-2">Réserver</button>
@@ -45,4 +46,9 @@
         {{ form_end(reservationForm) }}
     </div>
 
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('reservationHour') }}
 {% endblock %}

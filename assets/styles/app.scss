@@ -69,4 +69,12 @@ p, a, label {
   font-family: 'Maven Pro', sans-serif;
 }
 
+.hidden {
+  opacity: 0;
+  display: none;
+}
 
+.show {
+  opacity: 100%;
+  transition-duration: 0.5s;
+}

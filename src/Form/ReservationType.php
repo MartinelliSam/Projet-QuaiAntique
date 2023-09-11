@@ -17,7 +17,6 @@ class ReservationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-
         $builder
             ->add('firstName', TextType::class, [
                 'label' => 'Nom',
@@ -31,10 +30,13 @@ class ReservationType extends AbstractType
             ])
             ->add('date', DateType::class, [
                 'label' => 'Date de la réservation',
-                'attr' => ['class' => 'mt-2 form-control'],
+                'attr' => [
+                    'class' => 'mt-2 form-control',
+                    'id' => 'reservation_date'
+                ],
                 'widget' => 'single_text',
                 'required' => 'true',
-                'invalid_message' => 'La date doit être supérieure à celle du jour'
+                'invalid_message' => 'La date doit être supérieure à celle du jour',
             ])
             ->add('time', TimeType::class, [
                 'label' => 'Heure de la réservation',
@@ -61,14 +63,16 @@ class ReservationType extends AbstractType
                 'attr' => ['class' => 'form-control mt-2'],
                 'required' => 'true'
             ]);
+
     }
 
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Reservation::class,
-            ]);
+            'data_class' => Reservation::class
+        ]);
     }
 
 }
+

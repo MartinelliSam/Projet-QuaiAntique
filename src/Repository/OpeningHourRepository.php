@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\OpeningHour;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\DBAL\Exception;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -39,11 +40,42 @@ class OpeningHourRepository extends ServiceEntityRepository
         }
     }
 
-    public function findOpeningHour()
+
+    /**
+     * @throws Exception
+     */
+    public function getAllOpeningHours(): array
     {
-        return $this->createQueryBuilder('o')
-            ->orderBy('o.id', 'ASC')
-            ->getQuery()
-            ->getResult();
+        $conn = $this->getEntityManager()->getConnection();
+
+        $req = '
+            SELECT * FROM opening_hour
+            ';
+
+        $stmt = $conn->prepare($req);
+        $resultSet = $stmt->executeQuery();
+
+        // returns an array of arrays (i.e. a raw data set)
+        return $resultSet->fetchAllAssociative();
     }
+
+    /**
+     * @throws Exception
+     */
+    public function getOpeningHours($day): array
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $req = '
+            SELECT noon_opening_hour, noon_closing_hour, evening_opening_hour, evening_closing_hour FROM opening_hour
+            WHERE day = :day
+            ';
+
+        $stmt = $conn->prepare($req);
+        $resultSet = $stmt->executeQuery(['day' => $day]);
+
+        // returns an array of arrays (i.e. a raw data set)
+        return $resultSet->fetchAllAssociative();
+    }
+
 }
