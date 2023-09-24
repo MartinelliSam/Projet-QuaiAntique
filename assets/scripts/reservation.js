@@ -3,15 +3,11 @@ function show(id) {
     document.getElementById(id).classList.add('show');
 }
 
-function hide(id) {
-    document.getElementById(id).classList.add('hidden');
-}
-
 document.getElementById('hour').addEventListener('change', () => {
     show('number');
 });
 
-document.getElementById('number').addEventListener('change', () => {
+document.getElementById('number').addEventListener('click', () => {
     show('contact');
 });
 
