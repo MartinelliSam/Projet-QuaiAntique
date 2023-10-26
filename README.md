@@ -35,7 +35,7 @@ composer install
 
 ### Préparer l'environnement local
 
-Modifier le fichier env.local.test en .env.local
+Renommer le fichier .env.test en .env.local
 Modifier la ligne 27 pour mettre vos identifiants MariaDB
 
 ### Créer la base de données
