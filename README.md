@@ -54,10 +54,9 @@ Dans le terminal de commandes, taper :
 symfony serve:start
 ```
 
-### Identifiants administrateur
-Email : quaiantique@quaiantique.fr
+### Créer un compte administrateur
 
-Mot de passe : Se situe dans les livrables de la copie à rendre
+Créer un compte, et modifier en BDD le rôle ["ROLE_USER"] en ["ROLE_ADMIN"]
 
 ### Plateforme d'administration
 
