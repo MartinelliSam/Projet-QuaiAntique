@@ -53,6 +53,10 @@ Dans le terminal de commandes, taper :
 ```
 symfony serve:start
 ```
+Si vous n'avez pas Symfony CLI, taper dans le terminal de votre IDE : 
+```
+php -S 127.0.0.1:8000 -t public/
+```
 
 ### Créer un compte administrateur
 
