@@ -23,6 +23,26 @@ class EditUserType extends AbstractType
                     '8' => 8,
                     '10' => 10
                 ]])
+//            ->add('Password', RepeatedType::class, [
+//                'type' => PasswordType::class,
+//                // instead of being set onto the object directly,
+//                // this is read and encoded in the controller
+//                'invalid_message' => 'Les deux champs doivent contenir le même mot de passe',
+//                'options' =>
+//                    ['attr' => ['class' => 'form-control m-1']],
+//                'constraints' => [
+//                    new NotBlank([
+//                        'message' => 'Veuillez choisir un mot de passe',
+//                    ]),
+//                    new Length([
+//                        'min' => 12,
+//                        'minMessage' => 'Votre mot de passe doit comporter au moins {{ limit }} caractères',
+//                        // max length allowed by Symfony for security reasons
+//                        'max' => 50,
+//                        'maxMessage' => 'Votre mot de passe ne peut pas dépasser {{ limit }} caractères',
+//                    ]),
+//                ],
+//            ]);
              ;
     }
 

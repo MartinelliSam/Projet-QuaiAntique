@@ -23,15 +23,11 @@ header {
 
 main {
   grid-area: content;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 footer {
   grid-area: footer;
-}
-
-.card {
-  width: 30rem;
 }
 
 #image-text {
@@ -52,6 +48,16 @@ footer {
   opacity: 1;
 }
 
+#closing-message {
+  color: red;
+  font-weight: bold;
+}
+
+.card {
+  width: 30rem;
+}
+
+
 .justify {
   text-align: justify;
 }
@@ -65,16 +71,14 @@ footer {
   font-family: 'Radley', serif;
 }
 
+.hidden {
+  display: none;
+}
+
 p, a, label {
   font-family: 'Maven Pro', sans-serif;
 }
 
-.hidden {
-  opacity: 0;
-  display: none;
-}
 
-.show {
-  opacity: 100%;
-  transition-duration: 0.5s;
-}
+
+

@@ -4,10 +4,8 @@
 
 {% block body %}
     <div class="container-fluid">
-        <div class="row mt-2 justify-content-center">
-            <div class="col-md-4">
-                <h1 class="text-center headline m-5">S'inscrire</h1>
-            </div>
+        <div class="row mt-2">
+            <h1 class="text-center headline m-5">S'inscrire</h1>
         </div>
         <div class="row">
 
@@ -42,9 +40,7 @@
                     {{ form_row(registrationForm.Password.first, {
                         label: 'Choisissez un mot de passe'
                     }) }}
-                    <div id="passwordHelp" class="form-text">Votre mot de passe doit contenir entre 12 et 50
-                        caractères
-                    </div>
+                    <div id="passwordHelp" class="form-text">Votre mot de passe doit contenir entre 12 et 50 caractères</div>
                 </div>
             </div>
 

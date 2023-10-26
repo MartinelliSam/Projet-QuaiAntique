@@ -17,16 +17,12 @@
         "dev-server": "encore dev-server",
         "dev": "encore dev",
         "watch": "encore dev --watch",
-        "build": "encore production --progress",
-        "heroku-postbuild" : "node_modules/.bin/encore production"
+        "build": "encore production --progress"
     },
     "dependencies": {
         "bootstrap": "^5.2.3",
+        "jquery": "^3.7.1",
         "sass": "^1.62.1",
         "sass-loader": "^13.2.2"
-    },
-    "engines": {
-        "node": "v18.12.*",
-        "npm": "9.1.*"
     }
 }

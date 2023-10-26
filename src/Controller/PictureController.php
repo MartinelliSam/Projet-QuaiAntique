@@ -13,10 +13,12 @@ class PictureController extends AbstractController
     #[Route('/picture', name: 'app_picture')]
     public function index(EntityManagerInterface $entityManager): Response
     {
+
         $pictures = $entityManager->getRepository(Picture::class)->findAll();
         return $this->render('picture/picture.html.twig', [
             'pictures' => $pictures,
             'controller_name' => 'PictureController'
         ]);
     }
+
 }

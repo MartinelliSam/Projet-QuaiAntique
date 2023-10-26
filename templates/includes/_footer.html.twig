@@ -1,23 +1,23 @@
-<div class="container-fluid">
-    <h3 class="text-center fst-italic text-body">Heures d'ouverture</h3>
-    {% for openingHour in openingHours %}
+    <div class="container-fluid">
+        <h3 class="text-center fst-italic text-body">Heures d'ouverture</h3>
+        {% for openingHour in openingHours %}
         <p class="text-center">
             {{ openingHour.day }} :
             {% if (openingHour.noonOpeningHour is null) and  (openingHour.noonClosingHour is null) and (openingHour.eveningOpeningHour is null) and  (openingHour.eveningClosingHour is null) %}
-                Fermé
+            Fermé
             {% endif %}
             {% if (openingHour.noonOpeningHour is not null) %}
-                {{ openingHour.noonOpeningHour|date('H:i') }}H -
+                {{ openingHour.noonOpeningHour }}H00 -
             {% endif %}
             {% if (openingHour.noonClosingHour is not null) %}
-                {{ openingHour.noonClosingHour|date('H:i') }}H
+                {{ openingHour.noonClosingHour }}H00
             {% endif %}
             {% if (openingHour.eveningOpeningHour is not null) %}
-                {{ openingHour.eveningOpeningHour|date('H:i') }}H -
+                {{ openingHour.eveningOpeningHour }}H00 -
             {% endif %}
             {% if (openingHour.eveningClosingHour is not null) %}
-                {{ openingHour.eveningClosingHour|date('H:i') }}H
+                {{ openingHour.eveningClosingHour }}H00
             {% endif %}
         </p>
     {% endfor %}
-</div>
+    </div>

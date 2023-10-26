@@ -17,17 +17,17 @@ class OpeningHour
     #[ORM\Column(length: 255)]
     private ?string $day = null;
 
-    #[ORM\Column(type: Types::TIME_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $noonOpeningHour = null;
+    #[ORM\Column(nullable: true)]
+    private ?int $noonOpeningHour = null;
 
-    #[ORM\Column(type: Types::TIME_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $noonClosingHour = null;
+    #[ORM\Column(nullable: true)]
+    private ?int $noonClosingHour = null;
 
-    #[ORM\Column(type: Types::TIME_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $eveningOpeningHour = null;
+    #[ORM\Column(nullable: true)]
+    private ?int $eveningOpeningHour = null;
 
-    #[ORM\Column(type: Types::TIME_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $eveningClosingHour = null;
+    #[ORM\Column(nullable: true)]
+    private ?int $eveningClosingHour = null;
 
     public function getId(): ?int
     {
@@ -45,51 +45,46 @@ class OpeningHour
 
         return $this;
     }
-    public function getNoonOpeningHour(): ?\DateTimeInterface
+    public function getNoonOpeningHour(): ?int
     {
         return $this->noonOpeningHour;
     }
 
-    public function setNoonOpeningHour(?\DateTimeInterface $noonOpeningHour): self
+    public function setNoonOpeningHour(?int $noonOpeningHour): self
     {
         $this->noonOpeningHour = $noonOpeningHour;
         return $this;
     }
 
-    public function getNoonClosingHour(): ?\DateTimeInterface
+    public function getNoonClosingHour(): ?int
     {
         return $this->noonClosingHour;
     }
-    public function setNoonClosingHour(?\DateTimeInterface $noonClosingHour): self
+    public function setNoonClosingHour(?int $noonClosingHour): self
     {
         $this->noonClosingHour = $noonClosingHour;
         return $this;
     }
 
-    public function getEveningOpeningHour(): ?\DateTimeInterface
+    public function getEveningOpeningHour(): ?int
     {
         return $this->eveningOpeningHour;
     }
 
-    public function setEveningOpeningHour(?\DateTimeInterface $eveningOpeningHour): self
+    public function setEveningOpeningHour(?int $eveningOpeningHour): self
     {
         $this->eveningOpeningHour = $eveningOpeningHour;
         return $this;
     }
-    public function getEveningClosingHour(): ?\DateTimeInterface
+    public function getEveningClosingHour(): ?int
     {
         return $this->eveningClosingHour;
     }
 
-    public function setEveningClosingHour(?\DateTimeInterface $eveningClosingHour): self
+    public function setEveningClosingHour(?int $eveningClosingHour): self
     {
         $this->eveningClosingHour = $eveningClosingHour;
         return $this;
-    }
-
-    public function findDayOfWeek($date): string
-    {
-        return $date->format('N');
     }
 
 }

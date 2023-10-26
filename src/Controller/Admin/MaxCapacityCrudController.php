@@ -6,9 +6,6 @@ use App\Entity\MaxCapacity;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
-
-#[IsGranted('ROLE_ADMIN')]
 
 class MaxCapacityCrudController extends AbstractCrudController
 {
@@ -27,4 +24,5 @@ class MaxCapacityCrudController extends AbstractCrudController
             IntegerField::new('total', 'Capacité maximum du restaurant')
         ];
     }
+
 }

@@ -10,8 +10,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class OpeningHourController extends AbstractController
 {
+
     public function index(EntityManagerInterface $entityManager): void
     {
         $entityManager->getRepository(OpeningHourRepository::class)->findAll();
     }
+
 }

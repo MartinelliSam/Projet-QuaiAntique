@@ -6,9 +6,6 @@ use App\Entity\Menu;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
-
-#[IsGranted('ROLE_ADMIN')]
 
 class MenuCrudController extends AbstractCrudController
 {

@@ -8,10 +8,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TimeField;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Validator\Constraints\Time;
-
-#[IsGranted('ROLE_ADMIN')]
 
 class OpeningHourCrudController extends AbstractCrudController
 {
@@ -28,10 +25,11 @@ class OpeningHourCrudController extends AbstractCrudController
     {
         return [
             TextField::new('day', 'Jour'),
-            TimeField::new('noonOpeningHour', 'Heure d\'ouverture du midi'),
-            TimeField::new('noonClosingHour', 'Heure de fermeture du midi'),
-            TimeField::new('eveningOpeningHour', 'Heure d\'ouverture du soir'),
-            TimeField::new('eveningClosingHour', 'Heure de fermeture du soir'),
+            IntegerField::new('noonOpeningHour', 'Heure d\'ouverture du midi'),
+            IntegerField::new('noonClosingHour', 'Heure de fermeture du midi'),
+            IntegerField::new('eveningOpeningHour', 'Heure d\'ouverture du soir'),
+            IntegerField::new('eveningClosingHour', 'Heure de fermeture du soir'),
         ];
     }
+
 }
