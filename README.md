@@ -13,6 +13,9 @@ Selon les heures d'ouvertures renseignées, le formulaire de réservation sera m
 
 ![reservation](https://github.com/MartinelliSam/Projet-QuaiAntique/assets/122564923/d89f0c5c-d8bf-4ec7-9a9a-0e59b89bae14)
 
+## Démo 
+
+https://restaurant-lequaiantique.herokuapp.com/
 
 ## Installation en local
 
