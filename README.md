@@ -1,6 +1,19 @@
 # Projet-QuaiAntique
 Site du restaurant Le Quai Antique
 
+La plateforme d'administration a été créée à l'aide de EasyAdmin. Elle permet de mettre à jour toutes les informations du site : caroussel d'images sur la page d'accueil, horaires d'ouvertures, menus, formules, mais aussi de gérer les réservations. La gestion des rôles avec Symfony permet de la réserver à l'administrateur. 
+
+![admin](https://github.com/MartinelliSam/Projet-QuaiAntique/assets/122564923/463c6611-8ec5-4118-be63-c6f16a88dae6)
+
+Le client régulier peut créer un compte, et ainsi renseigner plusieurs informations (nom, prénom, nombre de convives par défaut), qui permettront de lui pré-remplir le formulaire de réservation après connexion avec ses identifiants. 
+
+![compte](https://github.com/MartinelliSam/Projet-QuaiAntique/assets/122564923/d57f7e62-812c-45cb-ac14-a0b593e5b148)
+
+Selon les heures d'ouvertures renseignées, le formulaire de réservation sera modifié dynamiquement pour indiquer au client si le restaurant est fermé ou non, et le choix des horaires sera mis à jour en fonction. 
+
+![reservation](https://github.com/MartinelliSam/Projet-QuaiAntique/assets/122564923/d89f0c5c-d8bf-4ec7-9a9a-0e59b89bae14)
+
+
 ## Installation en local
 
 ### Pré-requis
