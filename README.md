@@ -1,5 +1,5 @@
 # Projet-QuaiAntique
-Site du restaurant Le Quai Antique
+Site du restaurant Le Quai Antique, réalisé avec Symfony.
 
 La plateforme d'administration a été créée à l'aide de EasyAdmin. Elle permet de mettre à jour toutes les informations du site : caroussel d'images sur la page d'accueil, horaires d'ouvertures, menus, formules, mais aussi de gérer les réservations. La gestion des rôles avec Symfony permet de la réserver à l'administrateur. 
 
